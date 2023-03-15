@@ -21,16 +21,6 @@ export default function Basket({basket, user}) {
         return total;
     };
 
-    const BasketList = styled.ul`
-        color: white;
-        padding: 1rem;
-        border-bottom: 2px solid white;
-    `;
-
-    const BasketDetails = styled.div`
-        color: white;
-        `;
-
     return (
         <BasketDetails>
             <h2>Hello {user}, you have {basket.length} items in your basket</h2>
@@ -39,3 +29,13 @@ export default function Basket({basket, user}) {
         </BasketDetails>
     );
 };
+
+const BasketList = styled.ul`
+    color: white;
+    padding: 1rem;
+    border-bottom: 2px solid white;
+`;
+
+const BasketDetails = styled.div`
+    color: white;
+    `;

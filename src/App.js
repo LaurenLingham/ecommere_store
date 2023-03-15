@@ -4,11 +4,6 @@ import styled from "styled-components";
 
 function App() {
 
-  const Application = styled.div`
-    background-color: #c2d0d0;
-
-  `;
-
   return (
     <Application className="App">
       <StoreContainer />
@@ -17,3 +12,7 @@ function App() {
 }
 
 export default App;
+
+const Application = styled.div`
+  background-color: #c2d0d0;
+`;

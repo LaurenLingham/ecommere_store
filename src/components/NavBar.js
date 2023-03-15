@@ -4,20 +4,6 @@ import styled from "styled-components";
 
 export default function NavBar() {
 
-    const Nav = styled.nav`
-        background: radial-gradient(#7b9d9d, #7b9d9d3d);
-        color: white;
-        padding: 1rem;
-        border-bottom: 2px solid white;
-    `;
-
-    const List = styled.ul`
-        color: white;
-        text-align: left;
-        display: flex;
-        justify-content: space-between;
-    `;
-
     return (
         <Nav>
             <List>
@@ -30,3 +16,17 @@ export default function NavBar() {
         </Nav>
   );
 };
+
+const Nav = styled.nav`
+    background: radial-gradient(#7b9d9d, #7b9d9d3d);
+    color: white;
+    padding: 1rem;
+    border-bottom: 2px solid white;
+`;
+
+const List = styled.ul`
+    color: white;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+`;
