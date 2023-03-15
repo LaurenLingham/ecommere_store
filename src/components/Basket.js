@@ -1,13 +1,13 @@
 import React from "react";
+import styled from "styled-components";
 
 export default function Basket({basket, user}) {
     const basketItems = basket.map((item, index) => {
         return (
             <li key={index}>
                 <img src={item.img} alt="" height="150" width="150"/>
-                <h2>{item.title}</h2>
-                <h3>{item.artist}</h3>
-                <h4>{item.year}</h4>
+                <p>{item.title}</p>
+                <p>{item.artist}</p>
                 <h5>£{item.price}</h5>
             </li>
         );
@@ -21,11 +21,21 @@ export default function Basket({basket, user}) {
         return total;
     };
 
+    const BasketList = styled.ul`
+        color: white;
+        padding: 1rem;
+        border-bottom: 2px solid white;
+    `;
+
+    const BasketDetails = styled.div`
+        color: white;
+        `;
+
     return (
-        <>
+        <BasketDetails>
             <h2>Hello {user}, you have {basket.length} items in your basket</h2>
-            <ul>{basketItems}</ul>
+            <BasketList>{basketItems}</BasketList>
             <p>Basket total: £{basketTotal(basket)}</p>
-        </>
+        </BasketDetails>
     );
 };
